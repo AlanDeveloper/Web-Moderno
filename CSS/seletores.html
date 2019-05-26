@@ -6,7 +6,26 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*  Seletores
+            *  // all
+            #aninhado > div // filho direto
+            #aninhado > section // Como não é filho direto não funciona
+            p + ul // Se tiver um 'ul' após um 'p'
+            p + ol // Se tiver um 'ol' após um 'p'
+            p ~ ol // Se tiver um 'ol'
+            [feira=escritorio] // Pega o atributo que for exatamente 'escritorio'
+            [feira~=escritorio] // Pega escritorio se estiver em alguma posição
+            [feira*=sa] // Pega em qualquer posição
+            [feira] // Pega todos
+            span:nth-child(1) // Primeiro filho
+            section > :nth-child(odd) // Seleciona filhos impares
+            section > :nth-child(even) // Seleciona filhos pares
+            section > span:nth-of-type(2) // Seleciona o segundo elemento 'span'
+        */
+        section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +48,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
