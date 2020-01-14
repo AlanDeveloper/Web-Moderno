@@ -25,7 +25,18 @@ import ReactDOM from 'react-dom';
 //     </div>
 // , document.getElementById('root'));
 
-import Saudacao from './componentes/Saudacao';
+// import Saudacao from './componentes/Saudacao';
+// ReactDOM.render(<div>
+//     <Saudacao tipo="Bom dia" nome="João"/>
+// </div>, document.getElementById('root'));
+
+import Pai from './componentes/Pai';
+import Filho from './componentes/Filho';
 ReactDOM.render(<div>
-    <Saudacao tipo="Bom dia" nome="João"/>
+    {/* <Pai nome="Paulo" sobrenome="Silva"/> */}
+    <Pai nome="Paulo" sobrenome="Silva">
+        <Filho nome="Pedro" />
+        <Filho nome="Paulo" sobrenome="Silva" />
+        <Filho nome="Carla" sobrenome="Silva" />
+    </Pai>
 </div>, document.getElementById('root'));
